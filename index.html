@@ -12,7 +12,7 @@
 			height: 100vh;
 			overflow: hidden;
 		}
-		textarea 
+		textarea, pre
 		{
 			display: block;
 			width: 90%;
@@ -20,6 +20,8 @@
 			margin: 1% 5%;
 			padding: 8px;
 			box-sizing: border-box;
+			tab-size: 2;
+			overflow: auto;
 		}
 		
 		#regex 
@@ -43,7 +45,7 @@
 	<input type="text" name="regex" id="regex" placeholder="Data Pattern">
 	<textarea name="ttq" id="ttq" placeholder="Truth Talk Query"></textarea>
 	<button id="compute">Compute</button>
-	<textarea id="result" placeholder="Result"></textarea>
+	<pre id="result" placeholder="Result"></pre>
 	<script src="truth.js"></script>
 	<script src="reflex-core.js"></script>
 	<script src="truthtalk.js"></script>
@@ -73,7 +75,7 @@ Something
 	Name : "Chair"
 	Size : 10
 	Test : "test"
-	`;
+`;
 	
 	window.Schema = Backer.Schema;
 	
@@ -86,7 +88,7 @@ Something
 		result.innerText = "";
 		const res = await Demo.Calculate();
 		console.log(res);
-		result.innerText = JSON.stringify(res, null, 2);
+		result.innerText = JSON.stringify(res, null, "\t");
 	}
 	</script>
 </body>

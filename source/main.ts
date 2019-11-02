@@ -80,6 +80,8 @@ boolean : any
 		const BCode = Backer.Code.load(simplecode);
 		BCode.loadData(simpledata);
 		
+		Object.assign(window, Backer.Schema);
+		
 		let Enum = tt(eval(query));
 		console.log(Enum);
 		return Backer.TruthTalk.Query(Enum);
