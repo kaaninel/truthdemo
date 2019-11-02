@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"outFile": "./build/demo.js",
+		"composite": true,
+		"module": "system",
+		"target": "esnext",
+		"inlineSourceMap": true,
+		"inlineSources": true,
+		"strict": true,
+		"rootDir": ".",
+		"declaration": true,
+		"declarationMap": true,
+		"stripInternal": false,
+		"incremental": true,
+		"lib": [
+			"dom",
+			"esnext",
+			"esnext.array",
+			"esnext.asynciterable"
+		]
+	},
+	"include": [
+		"source/**/*.ts"
+	],
+	"references": [
+		{ "path": "../TruthStack/Truth/source" },
+		{ "path": "../TruthStack/Backer/TruthTalk"},
+		{ "path": "../TruthStack/Backer/Encoder" },
+		{ "path": "../TruthStack/Encoder/lib" },
+		{ "path": "../TruthStack/Backer/TruthTalk.Engine"},
+	]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Truth Demo</title>
+	<style>
+		body 
+		{
+			margin: 0;	
+			height: 100vh;
+			overflow: hidden;
+		}
+		textarea 
+		{
+			display: block;
+			width: 90%;
+			height: 30%;
+			margin: 1% 5%;
+			padding: 8px;
+			box-sizing: border-box;
+		}
+		
+		#regex 
+		{
+			box-sizing: border-box;
+			margin: 0 5%;
+			width: 90%;
+		}
+		
+		#compute
+		{
+			box-sizing: border-box;
+			margin: 0 5%;
+			width: 90%;
+		}
+		
+	</style>
+</head>
+<body>
+	<textarea name="truthcode" id="truthcode" placeholder="Truth Code"></textarea>
+	<input type="text" name="regex" id="regex" placeholder="Data Pattern">
+	<textarea name="ttq" id="ttq" placeholder="Truth Talk Query"></textarea>
+	<button id="compute">Compute</button>
+	<textarea id="result" placeholder="Result"></textarea>
+	<script src="truth.js"></script>
+	<script src="reflex-core.js"></script>
+	<script src="truthtalk.js"></script>
+	<script src="encoder.js"></script>
+	<script src="truthtalk-engine.js"></script>
+	<script src="encoderlib.js"></script>
+	<script src="/build/demo.js"></script>
+	
+	<script>
+		const code = document.querySelector("#truthcode");
+		code.value = `Product
+	Name : string
+	Size : number
+
+000-000-001 : Product
+	Name : "Screw"
+	Size : 5
+
+000-000-002 : Product
+	Name : "Toy"
+	Size : 10
+	
+Something
+	Test : string
+	
+000-000-003 : Product, Something
+	Name : "Chair"
+	Size : 10
+	Test : "test"
+	`;
+	
+	window.Schema = Backer.Schema;
+	
+	const pattern = document.querySelector("#regex");
+	pattern.value = `\\d{3}-\\d{3}-\\d{3}`
+	const compute = document.querySelector("#compute");
+	const result = document.querySelector("#result");
+	compute.onclick = async () => 
+	{
+		result.innerText = "";
+		const res = await Demo.Calculate();
+		console.log(res);
+		result.innerText = JSON.stringify(res, null, 2);
+	}
+	</script>
+</body>
+</html>
