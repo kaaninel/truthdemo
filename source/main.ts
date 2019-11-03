@@ -82,8 +82,11 @@ boolean : any
 		
 		Object.assign(window, Backer.Schema);
 		
-		let Enum = tt(eval(query));
-		console.log(Enum);
-		return Backer.TruthTalk.Query(Enum);
+		let Enum = eval(`tt(${query})`);
+		console.log(Enum); 
+		
+		const cursors = new Backer.TruthTalk.CursorSet(...Object.values(Backer.DataGraph));
+		cursors.query(Enum);
+		return cursors.snapshot();
 	}
 }
