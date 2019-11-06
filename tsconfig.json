@@ -24,9 +24,7 @@
 	],
 	"references": [
 		{ "path": "../TruthStack/Truth/source" },
-		{ "path": "../TruthStack/Backer/TruthTalk"},
-		{ "path": "../TruthStack/Backer/Encoder" },
-		{ "path": "../TruthStack/Encoder/lib" },
-		{ "path": "../TruthStack/Backer/TruthTalk.Engine"},
+		{ "path": "../TruthStack/Reflex/ReflexCore" },
+		{ "path": "../TruthStack/Backer"}
 	]
 }

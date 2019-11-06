@@ -6,6 +6,6 @@ declare namespace Demo {
         static readonly Query: string;
         static readonly Pattern: string;
     }
-    function Calculate(): Promise<Backer.ObjectType<Backer.PLAObject<String>>[] | undefined>;
+    function Calculate(): Promise<Backer.Surrogate<string>[] | undefined>;
 }
 //# sourceMappingURL=demo.d.ts.map

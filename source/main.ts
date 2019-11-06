@@ -55,11 +55,11 @@ boolean : any
 		for (const fault of doc.program.faults.each())
 			console.error(fault.toString());
 			
-		let code = new Encoder.Code();
+		let code = new Backer.Code();
 	
 		const drill = (type: Truth.Type) => 
 		{
-			code.add(Encoder.Type.fromTruth(code, type));
+			code.add(Backer.Type.new(code, type));
 			for (const sub of type.contents)
 				drill(sub);
 		};
@@ -67,8 +67,6 @@ boolean : any
 		for (const type of doc.types)
 			drill(type);
 			
-		code.link();
-				
 		const extracted = code.extractData(new RegExp(pattern));
 		
 		code = extracted.code;
@@ -77,7 +75,7 @@ boolean : any
 		const simplecode = JSON.parse(JSON.stringify(code));
 		const simpledata = JSON.parse(JSON.stringify(data));
 		
-		const BCode = Backer.Code.load(simplecode);
+		const BCode = Backer.Code.new(simplecode);
 		BCode.loadData(simpledata);
 		
 		Object.assign(window, Backer.Schema);
@@ -85,7 +83,7 @@ boolean : any
 		let Enum = eval(`tt(${query})`);
 		console.log(Enum); 
 		
-		const cursors = new Backer.TruthTalk.CursorSet(...Object.values(Backer.DataGraph));
+		const cursors = new Backer.TruthTalk.CursorSet(...Object.values(Backer.Graph));
 		cursors.query(Enum);
 		return cursors.snapshot();
 	}
