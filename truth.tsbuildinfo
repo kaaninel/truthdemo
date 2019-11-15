@@ -1,0 +1,571 @@
+{
+  "bundle": {
+    "commonSourceDirectory": "../TruthStack/Truth",
+    "sourceFiles": [
+      "../TruthStack/Truth/source/util/Helpers.ts",
+      "../TruthStack/Truth/source/util/MultiMap.ts",
+      "../TruthStack/Truth/source/util/Fs.ts",
+      "../TruthStack/Truth/source/util/Fetch.ts",
+      "../TruthStack/Truth/source/util/Hash.ts",
+      "../TruthStack/Truth/source/util/HigherOrder.ts",
+      "../TruthStack/Truth/source/util/Not.ts",
+      "../TruthStack/Truth/source/util/Parser.ts",
+      "../TruthStack/Truth/source/util/UnicodeBlocks.ts",
+      "../TruthStack/Truth/source/util/Misc.ts",
+      "../TruthStack/Truth/source/system/Program.ts",
+      "../TruthStack/Truth/source/system/AgentCache.ts",
+      "../TruthStack/Truth/source/system/Cause.ts",
+      "../TruthStack/Truth/source/system/Exception.ts",
+      "../TruthStack/Truth/source/system/Uri.ts",
+      "../TruthStack/Truth/source/system/UriProtocol.ts",
+      "../TruthStack/Truth/source/system/UriParser.ts",
+      "../TruthStack/Truth/source/system/UriComponent.ts",
+      "../TruthStack/Truth/source/system/UriReader.ts",
+      "../TruthStack/Truth/source/system/Syntax.ts",
+      "../TruthStack/Truth/source/system/FaultService.ts",
+      "../TruthStack/Truth/source/system/Faults.ts",
+      "../TruthStack/Truth/source/system/VersionStamp.ts",
+      "../TruthStack/Truth/source/fsm/Alphabet.ts",
+      "../TruthStack/Truth/source/fsm/TransitionMap.ts",
+      "../TruthStack/Truth/source/fsm/TransitionState.ts",
+      "../TruthStack/Truth/source/fsm/Guide.ts",
+      "../TruthStack/Truth/source/fsm/Fsm.ts",
+      "../TruthStack/Truth/source/fsm/FsmTranslator.ts",
+      "../TruthStack/Truth/source/phases/file/Document.ts",
+      "../TruthStack/Truth/source/phases/file/DocumentGraph.ts",
+      "../TruthStack/Truth/source/phases/file/DocumentHeader.ts",
+      "../TruthStack/Truth/source/phases/file/LineParser.ts",
+      "../TruthStack/Truth/source/phases/file/Anon.ts",
+      "../TruthStack/Truth/source/phases/file/Line.ts",
+      "../TruthStack/Truth/source/phases/file/Bounds.ts",
+      "../TruthStack/Truth/source/phases/file/Statement.ts",
+      "../TruthStack/Truth/source/phases/file/Pattern.ts",
+      "../TruthStack/Truth/source/phases/file/PatternPrecompiler.ts",
+      "../TruthStack/Truth/source/phases/file/RegexTypes.ts",
+      "../TruthStack/Truth/source/phases/file/Infix.ts",
+      "../TruthStack/Truth/source/phases/file/Identifier.ts",
+      "../TruthStack/Truth/source/phases/file/Span.ts",
+      "../TruthStack/Truth/source/phases/file/Spine.ts",
+      "../TruthStack/Truth/source/phases/file/Subject.ts",
+      "../TruthStack/Truth/source/phases/graph/HyperGraph.ts",
+      "../TruthStack/Truth/source/phases/graph/Node.ts",
+      "../TruthStack/Truth/source/phases/graph/NodeIndex.ts",
+      "../TruthStack/Truth/source/phases/graph/HyperEdge.ts",
+      "../TruthStack/Truth/source/phases/graph/InfixSpan.ts",
+      "../TruthStack/Truth/source/phases/parallel/ConstructionWorker.ts",
+      "../TruthStack/Truth/source/phases/parallel/Parallel.ts",
+      "../TruthStack/Truth/source/phases/parallel/SpecifiedParallel.ts",
+      "../TruthStack/Truth/source/phases/parallel/UnspecifiedParallel.ts",
+      "../TruthStack/Truth/source/phases/parallel/CruftCache.ts",
+      "../TruthStack/Truth/source/phases/parallel/ParallelCache.ts",
+      "../TruthStack/Truth/source/phases/parallel/Contract.ts",
+      "../TruthStack/Truth/source/phases/parallel/Sanitizer.ts",
+      "../TruthStack/Truth/source/phases/type/Type.ts",
+      "../TruthStack/Truth/source/phases/type/TypeProxy.ts",
+      "../TruthStack/Truth/source/phases/type/TypeProxyArray.ts",
+      "../TruthStack/Truth/source/phases/type/TypeCache.ts",
+      "../TruthStack/Truth/source/!.ts",
+      "../TruthStack/Truth/source/system/Recognition.ts"
+    ],
+    "js": {
+      "sections": [
+        {
+          "pos": 0,
+          "end": 13,
+          "kind": "prologue",
+          "data": "use strict"
+        },
+        {
+          "pos": 14,
+          "end": 470742,
+          "kind": "text"
+        }
+      ],
+      "sources": {
+        "prologues": [
+          {
+            "file": 0,
+            "text": "",
+            "directives": [
+              {
+                "pos": -1,
+                "end": -1,
+                "expression": {
+                  "pos": -1,
+                  "end": -1,
+                  "text": "use strict"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dts": {
+      "sections": [
+        {
+          "pos": 0,
+          "end": 30,
+          "kind": "type",
+          "data": "node"
+        },
+        {
+          "pos": 31,
+          "end": 698,
+          "kind": "text"
+        },
+        {
+          "pos": 698,
+          "end": 1363,
+          "kind": "internal"
+        },
+        {
+          "pos": 1364,
+          "end": 1431,
+          "kind": "text"
+        },
+        {
+          "pos": 1431,
+          "end": 1892,
+          "kind": "internal"
+        },
+        {
+          "pos": 1893,
+          "end": 1936,
+          "kind": "text"
+        },
+        {
+          "pos": 1936,
+          "end": 2249,
+          "kind": "internal"
+        },
+        {
+          "pos": 2250,
+          "end": 7714,
+          "kind": "text"
+        },
+        {
+          "pos": 7714,
+          "end": 9920,
+          "kind": "internal"
+        },
+        {
+          "pos": 9921,
+          "end": 10184,
+          "kind": "text"
+        },
+        {
+          "pos": 10184,
+          "end": 10245,
+          "kind": "internal"
+        },
+        {
+          "pos": 10246,
+          "end": 10304,
+          "kind": "text"
+        },
+        {
+          "pos": 10304,
+          "end": 10364,
+          "kind": "internal"
+        },
+        {
+          "pos": 10365,
+          "end": 12146,
+          "kind": "text"
+        },
+        {
+          "pos": 12146,
+          "end": 12203,
+          "kind": "internal"
+        },
+        {
+          "pos": 12204,
+          "end": 17742,
+          "kind": "text"
+        },
+        {
+          "pos": 17742,
+          "end": 18218,
+          "kind": "internal"
+        },
+        {
+          "pos": 18219,
+          "end": 19259,
+          "kind": "text"
+        },
+        {
+          "pos": 19259,
+          "end": 20060,
+          "kind": "internal"
+        },
+        {
+          "pos": 20061,
+          "end": 20095,
+          "kind": "text"
+        },
+        {
+          "pos": 20095,
+          "end": 22452,
+          "kind": "internal"
+        },
+        {
+          "pos": 22453,
+          "end": 30441,
+          "kind": "text"
+        },
+        {
+          "pos": 30441,
+          "end": 32407,
+          "kind": "internal"
+        },
+        {
+          "pos": 32408,
+          "end": 33414,
+          "kind": "text"
+        },
+        {
+          "pos": 33414,
+          "end": 33799,
+          "kind": "internal"
+        },
+        {
+          "pos": 33800,
+          "end": 44379,
+          "kind": "text"
+        },
+        {
+          "pos": 44379,
+          "end": 45109,
+          "kind": "internal"
+        },
+        {
+          "pos": 45110,
+          "end": 54713,
+          "kind": "text"
+        },
+        {
+          "pos": 54713,
+          "end": 57324,
+          "kind": "internal"
+        },
+        {
+          "pos": 57325,
+          "end": 57353,
+          "kind": "text"
+        },
+        {
+          "pos": 57353,
+          "end": 58533,
+          "kind": "internal"
+        },
+        {
+          "pos": 58534,
+          "end": 58678,
+          "kind": "text"
+        },
+        {
+          "pos": 58678,
+          "end": 59350,
+          "kind": "internal"
+        },
+        {
+          "pos": 59351,
+          "end": 59482,
+          "kind": "text"
+        },
+        {
+          "pos": 59482,
+          "end": 60772,
+          "kind": "internal"
+        },
+        {
+          "pos": 60773,
+          "end": 62789,
+          "kind": "text"
+        },
+        {
+          "pos": 62789,
+          "end": 72537,
+          "kind": "internal"
+        },
+        {
+          "pos": 72538,
+          "end": 72581,
+          "kind": "text"
+        },
+        {
+          "pos": 72581,
+          "end": 73051,
+          "kind": "internal"
+        },
+        {
+          "pos": 73052,
+          "end": 73131,
+          "kind": "text"
+        },
+        {
+          "pos": 73131,
+          "end": 73377,
+          "kind": "internal"
+        },
+        {
+          "pos": 73378,
+          "end": 81263,
+          "kind": "text"
+        },
+        {
+          "pos": 81263,
+          "end": 81424,
+          "kind": "internal"
+        },
+        {
+          "pos": 81425,
+          "end": 89175,
+          "kind": "text"
+        },
+        {
+          "pos": 89175,
+          "end": 90220,
+          "kind": "internal"
+        },
+        {
+          "pos": 90221,
+          "end": 91614,
+          "kind": "text"
+        },
+        {
+          "pos": 91614,
+          "end": 91832,
+          "kind": "internal"
+        },
+        {
+          "pos": 91833,
+          "end": 94175,
+          "kind": "text"
+        },
+        {
+          "pos": 94175,
+          "end": 94472,
+          "kind": "internal"
+        },
+        {
+          "pos": 94473,
+          "end": 95800,
+          "kind": "text"
+        },
+        {
+          "pos": 95800,
+          "end": 95847,
+          "kind": "internal"
+        },
+        {
+          "pos": 95848,
+          "end": 99008,
+          "kind": "text"
+        },
+        {
+          "pos": 99008,
+          "end": 99156,
+          "kind": "internal"
+        },
+        {
+          "pos": 99157,
+          "end": 101632,
+          "kind": "text"
+        },
+        {
+          "pos": 101632,
+          "end": 102308,
+          "kind": "internal"
+        },
+        {
+          "pos": 102309,
+          "end": 105866,
+          "kind": "text"
+        },
+        {
+          "pos": 105866,
+          "end": 105942,
+          "kind": "internal"
+        },
+        {
+          "pos": 105943,
+          "end": 114714,
+          "kind": "text"
+        },
+        {
+          "pos": 114714,
+          "end": 115232,
+          "kind": "internal"
+        },
+        {
+          "pos": 115233,
+          "end": 118307,
+          "kind": "text"
+        },
+        {
+          "pos": 118307,
+          "end": 118374,
+          "kind": "internal"
+        },
+        {
+          "pos": 118375,
+          "end": 119947,
+          "kind": "text"
+        },
+        {
+          "pos": 119947,
+          "end": 120172,
+          "kind": "internal"
+        },
+        {
+          "pos": 120173,
+          "end": 122858,
+          "kind": "text"
+        },
+        {
+          "pos": 122858,
+          "end": 122958,
+          "kind": "internal"
+        },
+        {
+          "pos": 122959,
+          "end": 128577,
+          "kind": "text"
+        },
+        {
+          "pos": 128577,
+          "end": 129122,
+          "kind": "internal"
+        },
+        {
+          "pos": 129123,
+          "end": 145751,
+          "kind": "text"
+        },
+        {
+          "pos": 145751,
+          "end": 145904,
+          "kind": "internal"
+        },
+        {
+          "pos": 145905,
+          "end": 146654,
+          "kind": "text"
+        },
+        {
+          "pos": 146654,
+          "end": 146837,
+          "kind": "internal"
+        },
+        {
+          "pos": 146838,
+          "end": 151184,
+          "kind": "text"
+        },
+        {
+          "pos": 151184,
+          "end": 151337,
+          "kind": "internal"
+        },
+        {
+          "pos": 151338,
+          "end": 155622,
+          "kind": "text"
+        },
+        {
+          "pos": 155622,
+          "end": 155809,
+          "kind": "internal"
+        },
+        {
+          "pos": 155810,
+          "end": 155874,
+          "kind": "text"
+        },
+        {
+          "pos": 155874,
+          "end": 156100,
+          "kind": "internal"
+        },
+        {
+          "pos": 156101,
+          "end": 157473,
+          "kind": "text"
+        },
+        {
+          "pos": 157473,
+          "end": 157735,
+          "kind": "internal"
+        },
+        {
+          "pos": 157736,
+          "end": 157954,
+          "kind": "text"
+        },
+        {
+          "pos": 157954,
+          "end": 158163,
+          "kind": "internal"
+        },
+        {
+          "pos": 158164,
+          "end": 162933,
+          "kind": "text"
+        },
+        {
+          "pos": 162933,
+          "end": 163113,
+          "kind": "internal"
+        },
+        {
+          "pos": 163114,
+          "end": 163148,
+          "kind": "text"
+        },
+        {
+          "pos": 163148,
+          "end": 163433,
+          "kind": "internal"
+        },
+        {
+          "pos": 163434,
+          "end": 163462,
+          "kind": "text"
+        },
+        {
+          "pos": 163462,
+          "end": 163751,
+          "kind": "internal"
+        },
+        {
+          "pos": 163752,
+          "end": 163780,
+          "kind": "text"
+        },
+        {
+          "pos": 163780,
+          "end": 164498,
+          "kind": "internal"
+        },
+        {
+          "pos": 164499,
+          "end": 164527,
+          "kind": "text"
+        },
+        {
+          "pos": 164527,
+          "end": 165196,
+          "kind": "internal"
+        },
+        {
+          "pos": 165197,
+          "end": 165516,
+          "kind": "text"
+        }
+      ]
+    }
+  },
+  "version": "3.7.2"
+}

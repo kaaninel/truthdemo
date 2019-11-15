@@ -1,6 +1,7 @@
 
 namespace Demo
 {
+	export const TruthTypes: Truth.Type[] = [];
 	export class Text
 	{
 		static Backer = `
@@ -59,6 +60,7 @@ boolean : any
 	
 		const drill = (type: Truth.Type) => 
 		{
+			TruthTypes.push(type);
 			code.add(Backer.Type.new(code, type));
 			for (const sub of type.contents)
 				drill(sub);
@@ -78,10 +80,10 @@ boolean : any
 		const BCode = Backer.Code.new(simplecode);
 		BCode.loadData(simpledata);
 		
-		Object.assign(window, Backer.Schema);
-		
-		let Enum = eval(`tt(${query})`);
-		console.log(Enum); 
+		let Enum = new Function(
+			...Object.keys(Backer.Schema).map(x => "_" + x.replace(/[^\d\w]/gm, () => "_")), 
+			`return tt(${query})`
+			)(...Object.values(Backer.Schema));
 		
 		const cursors = new Backer.TruthTalk.CursorSet(...Object.values(Backer.Graph));
 		cursors.query(Enum);
